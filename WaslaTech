@@ -1,0 +1,1159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="WaslaTech - Enterprise Telecom Solutions for Companies. High-speed connectivity, VoIP, and global enterprise infrastructure.">
+    <meta name="keywords" content="telecom, business connectivity, VoIP, enterprise solutions, WaslaTech, fiber optic, 5G">
+    <meta name="author" content="WaslaTech">
+    <title>WaslaTech | Enterprise Telecom Solutions</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    
+    <!-- Animation Library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    
+    <style>
+        :root {
+            /* Professional Color Palette */
+            --primary: #0f172a; /* Slate 900 */
+            --primary-light: #1e293b; /* Slate 800 */
+            --accent: #3b82f6; /* Blue 500 */
+            --accent-hover: #2563eb; /* Blue 600 */
+            --accent-soft: rgba(59, 130, 246, 0.1);
+            
+            --text-main: #334155; /* Slate 700 */
+            --text-heading: #0f172a; /* Slate 900 */
+            --text-muted: #64748b; /* Slate 500 */
+            
+            --bg-light: #ffffff;
+            --bg-subtle: #f8fafc; /* Slate 50 */
+            --border: #e2e8f0; /* Slate 200 */
+            
+            --white: #ffffff;
+            --success: #10b981;
+            --error: #ef4444;
+            
+            /* Spacing & Radius */
+            --radius-sm: 0.5rem;
+            --radius-md: 0.75rem;
+            --radius-lg: 1rem;
+            --radius-xl: 1.5rem;
+            --radius-full: 9999px;
+            
+            --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+            --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+            --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+            
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            --font-heading: 'Plus Jakarta Sans', sans-serif;
+            --font-body: 'Inter', sans-serif;
+        }
+
+        /* Dark Mode Overrides */
+        body.dark-mode {
+            --primary: #f8fafc;
+            --primary-light: #f1f5f9;
+            --accent: #60a5fa;
+            --accent-hover: #93c5fd;
+            --accent-soft: rgba(96, 165, 250, 0.15);
+            
+            --text-main: #94a3b8;
+            --text-heading: #f8fafc;
+            --text-muted: #64748b;
+            
+            --bg-light: #0f172a;
+            --bg-subtle: #1e293b;
+            --border: #334155;
+        }
+
+        /* Base Styles */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: var(--font-body);
+            color: var(--text-main);
+            background-color: var(--bg-light);
+            line-height: 1.6;
+            transition: var(--transition);
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--font-heading);
+            color: var(--text-heading);
+            font-weight: 700;
+            line-height: 1.2;
+        }
+
+        a { text-decoration: none; color: inherit; transition: var(--transition); }
+        ul { list-style: none; }
+        img { max-width: 100%; height: auto; display: block; }
+        .container { max-width: 1240px; margin: 0 auto; padding: 0 1.5rem; }
+        section { padding: 6rem 0; }
+
+        /* Utilities */
+        .text-center { text-align: center; }
+        .mb-1 { margin-bottom: 0.5rem; }
+        .mb-2 { margin-bottom: 1rem; }
+        .mb-4 { margin-bottom: 2rem; }
+        .hidden { display: none !important; }
+        .section-tag {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            background: var(--accent-soft);
+            color: var(--accent);
+            border-radius: var(--radius-full);
+            font-size: 0.875rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.75rem 1.5rem;
+            font-weight: 600;
+            border-radius: var(--radius-md);
+            cursor: pointer;
+            transition: var(--transition);
+            gap: 0.5rem;
+            border: none;
+            font-size: 1rem;
+        }
+        .btn-primary { background: var(--accent); color: white; }
+        .btn-primary:hover { background: var(--accent-hover); transform: translateY(-2px); box-shadow: var(--shadow-lg); }
+        .btn-outline { background: transparent; border: 1px solid var(--border); color: var(--text-heading); }
+        .btn-outline:hover { background: var(--bg-subtle); border-color: var(--accent); color: var(--accent); }
+        .btn-lg { padding: 1rem 2.5rem; font-size: 1.125rem; }
+        .btn-block { width: 100%; }
+
+        /* Header */
+        .header {
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            z-index: 1000;
+            border-bottom: 1px solid var(--border);
+            transition: var(--transition);
+        }
+        body.dark-mode .header { background: rgba(15, 23, 42, 0.8); }
+        
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 5rem;
+        }
+        .nav-brand {
+            font-family: var(--font-heading);
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--accent);
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+        .nav-brand i { font-size: 1.75rem; }
+        
+        .nav-links { display: flex; gap: 2.5rem; }
+        .nav-link {
+            font-weight: 500;
+            color: var(--text-main);
+            position: relative;
+        }
+        .nav-link:hover { color: var(--accent); }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -4px; left: 0; width: 0; height: 2px;
+            background: var(--accent);
+            transition: var(--transition);
+        }
+        .nav-link:hover::after { width: 100%; }
+
+        .header-actions { display: flex; align-items: center; gap: 1rem; }
+        
+        .theme-toggle {
+            width: 2.5rem; height: 2.5rem;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border);
+            background: transparent;
+            color: var(--text-heading);
+            cursor: pointer;
+            display: flex; align-items: center; justify-content: center;
+        }
+        .theme-toggle:hover { background: var(--bg-subtle); color: var(--accent); }
+
+        .mobile-menu-btn { display: none; font-size: 1.5rem; cursor: pointer; color: var(--text-heading); }
+
+        /* Hero Section */
+        .hero {
+            padding: 10rem 0 6rem;
+            background: radial-gradient(circle at top right, var(--accent-soft), transparent 40%),
+                        radial-gradient(circle at bottom left, var(--accent-soft), transparent 40%);
+            position: relative;
+            overflow: hidden;
+        }
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 4rem;
+            align-items: center;
+        }
+        .hero-title {
+            font-size: 4rem;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            letter-spacing: -0.02em;
+        }
+        .hero-title span { color: var(--accent); }
+        .hero-subtitle {
+            font-size: 1.25rem;
+            color: var(--text-muted);
+            margin-bottom: 2.5rem;
+            max-width: 600px;
+        }
+        .hero-actions { display: flex; gap: 1rem; }
+        
+        .hero-visual {
+            position: relative;
+            background: var(--bg-subtle);
+            border-radius: var(--radius-xl);
+            padding: 2rem;
+            border: 1px solid var(--border);
+            box-shadow: var(--shadow-xl);
+        }
+        .stats-floating {
+            position: absolute;
+            bottom: -20px; left: -20px;
+            background: var(--bg-light);
+            padding: 1.5rem;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-xl);
+            border: 1px solid var(--border);
+            display: flex; gap: 1.5rem;
+        }
+        .stat-item h4 { font-size: 1.5rem; color: var(--accent); }
+        .stat-item p { font-size: 0.75rem; text-transform: uppercase; font-weight: 600; color: var(--text-muted); }
+
+        /* About Section */
+        .about { background: var(--bg-subtle); }
+        .about-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        .about-card {
+            background: var(--bg-light);
+            padding: 2.5rem;
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--border);
+            transition: var(--transition);
+        }
+        .about-card:hover { transform: translateY(-10px); box-shadow: var(--shadow-xl); border-color: var(--accent); }
+        .about-card i {
+            font-size: 2.5rem;
+            color: var(--accent);
+            margin-bottom: 1.5rem;
+        }
+
+        /* Founders Section */
+        .founders-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2.5rem;
+        }
+        .founder-card {
+            text-align: center;
+            padding: 3rem 2rem;
+            background: var(--bg-light);
+            border-radius: var(--radius-xl);
+            border: 1px solid var(--border);
+            transition: var(--transition);
+        }
+        .founder-card:hover { border-color: var(--accent); box-shadow: var(--shadow-lg); }
+        .founder-img {
+            width: 120px; height: 120px;
+            background: var(--accent-soft);
+            border-radius: var(--radius-full);
+            margin: 0 auto 1.5rem;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 3rem; color: var(--accent);
+        }
+        .founder-card h3 { margin-bottom: 0.5rem; }
+        .founder-role { color: var(--accent); font-weight: 600; font-size: 0.875rem; margin-bottom: 1rem; }
+        .founder-socials { display: flex; justify-content: center; gap: 1rem; margin-top: 1rem; }
+        .founder-socials a { color: var(--text-muted); font-size: 1.25rem; }
+        .founder-socials a:hover { color: var(--accent); }
+
+        /* Pricing Section */
+        .pricing { background: var(--bg-subtle); }
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+        }
+        .pricing-card {
+            background: var(--bg-light);
+            padding: 3rem 2rem;
+            border-radius: var(--radius-xl);
+            border: 1px solid var(--border);
+            position: relative;
+            display: flex; flex-direction: column;
+            transition: var(--transition);
+        }
+        .pricing-card.popular {
+            border: 2px solid var(--accent);
+            transform: scale(1.05);
+            z-index: 10;
+        }
+        .popular-badge {
+            position: absolute;
+            top: -12px; left: 50%;
+            transform: translateX(-50%);
+            background: var(--accent);
+            color: white;
+            padding: 0.25rem 1rem;
+            border-radius: var(--radius-full);
+            font-size: 0.75rem; font-weight: 700;
+        }
+        .price { font-size: 3rem; font-weight: 800; color: var(--text-heading); margin: 1.5rem 0; }
+        .price span { font-size: 1rem; color: var(--text-muted); font-weight: 400; }
+        .pricing-features { margin: 2rem 0; flex-grow: 1; }
+        .pricing-features li { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem; }
+        .pricing-features i { color: var(--success); }
+
+        /* Features Section */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+        .feature-item {
+            padding: 2rem;
+            border-radius: var(--radius-lg);
+            border: 1px solid transparent;
+            transition: var(--transition);
+        }
+        .feature-item:hover { background: var(--bg-subtle); border-color: var(--border); }
+        .feature-icon {
+            width: 3rem; height: 3rem;
+            background: var(--accent-soft);
+            color: var(--accent);
+            border-radius: var(--radius-md);
+            display: flex; align-items: center; justify-content: center;
+            font-size: 1.5rem; margin-bottom: 1.5rem;
+        }
+
+        /* Contact Section */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 0.8fr 1.2fr;
+            gap: 4rem;
+        }
+        .contact-info-card {
+            background: var(--primary);
+            color: rgb(11, 117, 230);
+            padding: 3rem;
+            border-radius: var(--radius-xl);
+        }
+        .contact-info-card h2 { color: rgb(11, 85, 244); margin-bottom: 2rem; }
+        .info-link {
+            display: flex; align-items: flex-start; gap: 1.5rem; margin-bottom: 2rem;
+        }
+        .info-link i { font-size: 1.5rem; color: var(--accent); }
+        
+        .contact-form {
+            background: var(--bg-light);
+            padding: 3rem;
+            border-radius: var(--radius-xl);
+            border: 1px solid var(--border);
+            box-shadow: var(--shadow-lg);
+        }
+        .form-group { margin-bottom: 1.5rem; }
+        .form-group label { display: block; font-weight: 600; margin-bottom: 0.5rem; color: var(--text-heading); }
+        .form-control {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border);
+            background: var(--bg-subtle);
+            color: var(--text-heading);
+            font-family: inherit;
+            transition: var(--transition);
+        }
+        .form-control:focus { outline: none; border-color: var(--accent); background: var(--bg-light); box-shadow: 0 0 0 4px var(--accent-soft); }
+        .error-message { color: var(--error); font-size: 0.875rem; margin-top: 0.25rem; display: none; }
+
+        /* Auth Section */
+        .auth-container { max-width: 500px; margin: 0 auto; }
+        .auth-tabs {
+            display: flex; background: var(--bg-subtle);
+            padding: 0.5rem; border-radius: var(--radius-lg);
+            margin-bottom: 2rem;
+        }
+        .auth-tab {
+            flex: 1; padding: 0.75rem; border: none; background: transparent;
+            font-weight: 600; color: var(--text-muted); cursor: pointer;
+            border-radius: var(--radius-md); transition: var(--transition);
+        }
+        .auth-tab.active { background: var(--bg-light); color: var(--accent); box-shadow: var(--shadow-sm); }
+        
+        /* Footer */
+        .footer {
+            background: var(--primary);
+            color: #94a3b8;
+            padding: 5rem 0 2rem;
+        }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr 1fr;
+            gap: 4rem;
+            margin-bottom: 4rem;
+        }
+        .footer-logo { color: rgb(12, 104, 242); font-size: 1.5rem; font-weight: 800; margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.75rem; }
+        .footer-heading { color: rgb(11, 98, 247); font-size: 1.125rem; font-weight: 700; margin-bottom: 1.5rem; }
+        .footer-links li { margin-bottom: 0.75rem; }
+        .footer-links a:hover { color: var(--accent); padding-left: 0.5rem; }
+        .footer-bottom {
+            padding-top: 2rem;
+            border-top: 1px solid #1e293b;
+            display: flex; justify-content: space-between; align-items: center;
+            font-size: 0.875rem;
+        }
+        .social-links { display: flex; gap: 1rem; }
+        .social-link {
+            width: 2.5rem; height: 2.5rem;
+            background: #1e293b; color: white;
+            border-radius: var(--radius-md);
+            display: flex; align-items: center; justify-content: center;
+            transition: var(--transition);
+        }
+        .social-link:hover { background: var(--accent); transform: translateY(-3px); }
+
+        /* Chatbot */
+        .chat-widget {
+            position: fixed; bottom: 2rem; right: 2rem; z-index: 1000;
+        }
+        .chat-btn {
+            width: 3.5rem; height: 3.5rem;
+            background: var(--accent); color: white;
+            border-radius: var(--radius-full);
+            display: flex; align-items: center; justify-content: center;
+            font-size: 1.5rem; cursor: pointer;
+            box-shadow: var(--shadow-xl); transition: var(--transition);
+        }
+        .chat-btn:hover { transform: scale(1.1); }
+        
+        .chat-window {
+            position: absolute; bottom: 4.5rem; right: 0;
+            width: 350px; background: var(--bg-light);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-2xl);
+            border: 1px solid var(--border);
+            display: none; flex-direction: column;
+            overflow: hidden;
+            animation: fadeInUp 0.3s ease;
+        }
+        .chat-header {
+            background: var(--accent); color: white;
+            padding: 1rem 1.5rem; display: flex; justify-content: space-between; align-items: center;
+        }
+        .chat-body { height: 350px; overflow-y: auto; padding: 1.5rem; display: flex; flex-direction: column; gap: 1rem; }
+        .message { padding: 0.75rem 1rem; border-radius: var(--radius-md); max-width: 85%; font-size: 0.875rem; }
+        .message.bot { background: var(--bg-subtle); align-self: flex-start; border-bottom-left-radius: 0; }
+        .message.user { background: var(--accent); color: white; align-self: flex-end; border-bottom-right-radius: 0; }
+        .chat-footer { padding: 1rem; border-top: 1px solid var(--border); display: flex; gap: 0.5rem; }
+        .chat-input { flex: 1; border: 1px solid var(--border); padding: 0.5rem 1rem; border-radius: var(--radius-full); outline: none; }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .hero-title { font-size: 3rem; }
+            .footer-grid { grid-template-columns: 1fr 1fr; }
+        }
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .mobile-menu-btn { display: block; }
+            .hero-grid { grid-template-columns: 1fr; text-align: center; }
+            .hero-actions { justify-content: center; }
+            .contact-grid { grid-template-columns: 1fr; }
+            .stats-floating { display: none; }
+            .pricing-card.popular { transform: none; }
+            .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
+            .footer-bottom { flex-direction: column; gap: 1rem; text-align: center; }
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="#home" class="nav-brand">
+                    <i class="fas fa-satellite-dish"></i>
+                    <span>WaslaTech</span>
+                </a>
+                <ul class="nav-links">
+                    <li><a href="#home" class="nav-link">Home</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#plans" class="nav-link">Plans</a></li>
+                    <li><a href="#features" class="nav-link">Features</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+                <div class="header-actions">
+                    <button class="theme-toggle" id="themeToggle" title="Toggle Theme">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                    <a href="#auth" class="btn btn-primary">Client Portal</a>
+                    <div class="mobile-menu-btn" id="mobileMenuBtn">
+                        <i class="fas fa-bars"></i>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-grid">
+                <div class="hero-content animate__animated animate__fadeInLeft">
+                    <span class="section-tag">Next-Gen Connectivity</span>
+                    <h1 class="hero-title">Empowering Enterprises with <span>Reliable Telecom</span></h1>
+                    <p class="hero-subtitle">WaslaTech delivers world-class infrastructure, high-speed fiber, and dedicated support to keep your business connected 24/7.</p>
+                    <div class="hero-actions">
+                        <a href="#plans" class="btn btn-primary btn-lg">View Our Plans</a>
+                        <a href="#contact" class="btn btn-outline btn-lg">Get a Consultation</a>
+                    </div>
+                </div>
+                <div class="hero-visual animate__animated animate__fadeInRight">
+                    <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Enterprise Solutions" style="border-radius: var(--radius-lg);">
+                    <div class="stats-floating">
+                        <div class="stat-item">
+                            <h4>99.9%</h4>
+                            <p>Uptime SLA</p>
+                        </div>
+                        <div class="stat-item">
+                            <h4>500+</h4>
+                            <p>Enterprise Clients</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="text-center mb-4">
+                <span class="section-tag">About Us</span>
+                <h2>Pioneering Digital Infrastructure</h2>
+                <p style="max-width: 700px; margin: 0 auto;">We bridge the gap between businesses and the future with cutting-edge telecommunication solutions.</p>
+            </div>
+            <div class="about-grid">
+                <div class="about-card">
+                    <i class="fas fa-rocket"></i>
+                    <h3>Our Mission</h3>
+                    <p>To provide seamless, high-performance connectivity that enables businesses to thrive in a digital-first world.</p>
+                </div>
+                <div class="about-card">
+                    <i class="fas fa-eye"></i>
+                    <h3>Our Vision</h3>
+                    <p>To be the global leader in enterprise telecom infrastructure, known for reliability and innovation.</p>
+                </div>
+                <div class="about-card">
+                    <i class="fas fa-heart"></i>
+                    <h3>Our Values</h3>
+                    <p>Customer-centricity, uncompromising security, and continuous technological advancement.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Founders Section -->
+    <section class="founders">
+        <div class="container">
+            <div class="text-center mb-4">
+                <span class="section-tag">Leadership</span>
+                <h2>Meet the Founders</h2>
+            </div>
+            <div class="founders-grid">
+                <div class="founder-card">
+                    <div class="founder-img"><i class="fas fa-user-tie"></i></div>
+                    <h3>Mariam Ahmed</h3>
+                    <p class="founder-role">Co-Founder & CEO</p>
+                    <p>Visionary leader with 15+ years in telecom infrastructure and digital transformation. Visionary leader driving innovation and strategy (Head of Operations)</p>
+                    <div class="founder-socials">
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://www.instagram.com/m.elbaroudyyy/?hl=en"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="founder-card">
+                    <div class="founder-img"><i class="fas fa-user-gear"></i></div>
+                    <h3>Daniel Amgad</h3>
+                    <p class="founder-role">IT Speciallist and data analyst</p>
+                    <p>Expert in network architecture and cybersecurity, leading our technical innovation and data collection and analysis</p>
+                    <div class="founder-socials">
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://github.com/Daniel818-star"><i class="fab fa-github"></i></a>
+                        <a href="https://www.instagram.com/it_is_dani7923/?hl=en"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="founder-card">
+                    <div class="founder-img"><i class="fas fa-user-pen"></i></div>
+                    <h3>Farida Hussein</h3>
+                    <p class="founder-role">Marketing Director</p>
+                    <p>OLeads global branding and campaigns and a problem solver.</p>
+                    <div class="founder-socials">
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://www.instagram.com/farida.hxnn_/?hl=en"><i class="fab fa-instagram"></i></a>
+                        
+                    </div>
+                    
+            </div>
+            <div class="founder-card">
+                    <div class="founder-img"><i class="fas fa-user-tie"></i></div>
+                    <h3>Souhaib Djelani</h3>
+                    <p class="role">Business Strategy Advisor</p>
+                <p>Business planning and strategy. Experienced in driving growth initiatives.</p>
+                    <div class="founder-socials">
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://www.instagram.com/souhaib_4x/?hl=en"><i class="fab fa-instagram"></i></a>
+                    </div>
+                    
+        </div>
+         <div class="founder-card">
+                    <div class="founder-img"><i class="fas fa-user-gear"></i></div>
+                    <h3>Judy Ahmed</h3>
+                    <p class="role">UI/UX designer</p>
+                <p>Designs user-friendly experiences and interfaces.</p>
+                    <div class="founder-socials">
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://www.instagram.com/judy_ahmeddd_/?hl=en"><i class="fab fa-instagram"></i></a>
+                    </div>
+         
+
+                    
+        </div>
+        <div class="founder-card">
+                    <div class="founder-img"><i class="fas fa-user-pen"></i></div>
+                    <h3>Martin Medhat</h3>
+                <p class="role">Operations Manager</p>
+                <p>Ensures smooth business operations and efficient resource allocation.</p>
+                    <div class="founder-socials">
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://www.instagram.com/martin._.medhat/?hl=en"><i class="fab fa-instagram"></i></a>
+                    </div>
+    </section>
+
+    <!-- Plans Section -->
+    <section id="plans" class="pricing">
+        <div class="container">
+            <div class="text-center mb-4">
+                <span class="section-tag">Pricing</span>
+                <h2>Scalable Solutions for Every Business</h2>
+            </div>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <h3>Small Business</h3>
+                    <div class="price">$99<span>/month</span></div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check-circle"></i> 500GB High-Speed Data</li>
+                        <li><i class="fas fa-check-circle"></i> 24/7 Customer Support</li>
+                        <li><i class="fas fa-check-circle"></i> Secure Cloud Backup</li>
+                        <li><i class="fas fa-check-circle"></i> VoIP Video Conferencing</li>
+                    </ul>
+                    <button class="btn btn-outline btn-block" onclick="selectPlan('Small Business', '$99/month')">Get Started</button>
+                </div>
+                <div class="pricing-card popular">
+                    <div class="popular-badge">Most Popular</div>
+                    <h3>Medium Business</h3>
+                    <div class="price">$199<span>/month</span></div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check-circle"></i> 2TB High-Speed Data</li>
+                        <li><i class="fas fa-check-circle"></i> Dedicated Account Manager</li>
+                        <li><i class="fas fa-check-circle"></i> Priority Network Support</li>
+                        <li><i class="fas fa-check-circle"></i> Multi-location Connectivity</li>
+                        <li><i class="fas fa-check-circle"></i> Advanced Security Suite</li>
+                    </ul>
+                    <button class="btn btn-primary btn-block" onclick="selectPlan('Medium Business', '$199/month')">Get Started</button>
+                </div>
+                <div class="pricing-card">
+                    <h3>Enterprise</h3>
+                    <div class="price">Custom</div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check-circle"></i> Unlimited Data & Bandwidth</li>
+                        <li><i class="fas fa-check-circle"></i> Dedicated Infrastructure & SLA</li>
+                        <li><i class="fas fa-check-circle"></i> International Connectivity</li>
+                        <li><i class="fas fa-check-circle"></i> Enterprise-grade Security</li>
+                        <li><i class="fas fa-check-circle"></i> Onsite & Remote Support</li>
+                    </ul>
+                    <button class="btn btn-outline btn-block" onclick="selectPlan('Enterprise', 'Custom')">Contact Sales</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <div class="text-center mb-4">
+                <span class="section-tag">Features</span>
+                <h2>Why Enterprises Choose WaslaTech</h2>
+            </div>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <div class="feature-icon"><i class="fas fa-shield-alt"></i></div>
+                    <h3>Enterprise Security</h3>
+                    <p>End-to-end encryption, VPN, and corporate-grade security for sensitive data protection.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon"><i class="fas fa-bolt"></i></div>
+                    <h3>High-Speed Network</h3>
+                    <p>Lightning-fast fiber and 5G network optimized for business-critical applications.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon"><i class="fas fa-users"></i></div>
+                    <h3>Dedicated Support</h3>
+                    <p>Account managers and 24/7 technical support to ensure operations never stop.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon"><i class="fas fa-globe"></i></div>
+                    <h3>Global Connectivity</h3>
+                    <p>International bandwidth and low-latency connections for multi-national companies.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon"><i class="fas fa-cloud"></i></div>
+                    <h3>Cloud Integration</h3>
+                    <p>Seamless integration with corporate cloud services for backup and collaboration.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon"><i class="fas fa-dollar-sign"></i></div>
+                    <h3>Flexible Pricing</h3>
+                    <p>Custom plans and scalable pricing to suit businesses of all sizes.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info-card">
+                    <h2>Get in Touch</h2>
+                    <p class="mb-4">Our experts are ready to design the perfect telecom solution for your business.</p>
+                    
+                    <div class="info-link">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Call Us</h4>
+                            <p>+966 1 234 5678</p>
+                        </div>
+                    </div>
+                    <div class="info-link">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email Us</h4>
+                            <p>WaslaTech.Telecom@Gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="info-link">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Visit Us</h4>
+                            <p>Smart Village, Cairo, Egypt</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <label>Full Name</label>
+                        <input type="text" id="cName" class="form-control" placeholder="John Doe">
+                        <div class="error-message" id="nameError"></div>
+                    </div>
+                    <div class="form-group">
+                        <label>Company Name</label>
+                        <input type="text" id="cCompany" class="form-control" placeholder="Acme Corp">
+                        <div class="error-message" id="companyError"></div>
+                    </div>
+                    <div class="form-group">
+                        <label>Email Address</label>
+                        <input type="email" id="cEmail" class="form-control" placeholder="john@company.com">
+                        <div class="error-message" id="emailError"></div>
+                    </div>
+                    <div class="form-group">
+                        <label>Phone Number</label>
+                        <input type="tel" id="cPhone" class="form-control" placeholder="+966 1 234 5678">
+                        <div class="error-message" id="phoneError"></div>
+                    </div>
+                    <div class="form-group">
+                        <label>Message</label>
+                        <textarea id="cMessage" class="form-control" rows="4" placeholder="How can we help you?"></textarea>
+                        <div class="error-message" id="messageError"></div>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block btn-lg">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Auth Section -->
+    <section id="auth" class="auth">
+        <div class="container">
+            <div class="text-center mb-4">
+                <span class="section-tag">Client Portal</span>
+                <h2>Access Your Account</h2>
+            </div>
+            <div class="auth-container">
+                <div class="auth-tabs">
+                    <button class="auth-tab active" id="tabLoginBtn" onclick="switchAuthTab('login')">Login</button>
+                    <button class="auth-tab" id="tabSignupBtn" onclick="switchAuthTab('signup')">Sign Up</button>
+                </div>
+                
+                <!-- Login Card -->
+                <div class="contact-form" id="loginCard">
+                    <div class="text-center mb-2">
+                        <h3>Welcome Back</h3>
+                        <p class="text-muted">Sign in to manage your services</p>
+                    </div>
+                    <form id="loginForm">
+                        <div class="form-group">
+                            <label>Email Address</label>
+                            <input type="email" id="loginEmail" class="form-control" placeholder="you@company.com">
+                            <div class="error-message" id="loginEmailError"></div>
+                        </div>
+                        <div class="form-group">
+                            <label>Password</label>
+                            <input type="password" id="loginPassword" class="form-control" placeholder="••••••••">
+                            <div class="error-message" id="loginPasswordError"></div>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">Sign In</button>
+                    </form>
+                </div>
+
+                <!-- Signup Card -->
+                <div class="contact-form hidden" id="signupCard">
+                    <div class="text-center mb-2">
+                        <h3>Create Account</h3>
+                        <p class="text-muted">Join the WaslaTech network</p>
+                    </div>
+                    <form id="signupForm">
+                        <div class="form-group">
+                            <label>Full Name</label>
+                            <input type="text" id="signupName" class="form-control" placeholder="John Doe">
+                            <div class="error-message" id="signupNameError"></div>
+                        </div>
+                        <div class="form-group">
+                            <label>Email Address</label>
+                            <input type="email" id="signupEmail" class="form-control" placeholder="you@company.com">
+                            <div class="error-message" id="signupEmailError"></div>
+                        </div>
+                        <div class="form-group">
+                            <label>Password</label>
+                            <input type="password" id="signupPassword" class="form-control" placeholder="••••••••">
+                            <div class="error-message" id="signupPasswordError"></div>
+                        </div>
+                        <div class="form-group">
+                            <label>Confirm Password</label>
+                            <input type="password" id="confirmPassword" class="form-control" placeholder="••••••••">
+                            <div class="error-message" id="confirmPasswordError"></div>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">Create Account</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <a href="#" class="footer-logo">
+                        <i class="fas fa-satellite-dish"></i>
+                        WaslaTech
+                    </a>
+                    <p>Connecting enterprises with the next generation of telecommunication solutions. Reliable, secure, and lightning fast.</p>
+                </div>
+                <div>
+                    <h4 class="footer-heading">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#plans">Plans</a></li>
+                        <li><a href="#features">Features</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-heading">Support</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Documentation</a></li>
+                        <li><a href="#">Network Status</a></li>
+                        <li><a href="#">SLA Terms</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-heading">Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 WaslaTech Telecom. All rights reserved.</p>
+                <div style="display: flex; gap: 1.5rem;">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Chatbot -->
+    <div class="chat-widget">
+        <div class="chat-window" id="chatWindow">
+            <div class="chat-header">
+                <span>WaslaTech Assistant</span>
+                <i class="fas fa-times" style="cursor: pointer;" onclick="toggleChat()"></i>
+            </div>
+            <div class="chat-body" id="chatBody">
+                <div class="message bot">Hello! 👋 How can I assist you with our telecom solutions today?</div>
+            </div>
+            <div class="chat-footer">
+                <input type="text" class="chat-input" id="chatInput" placeholder="Type a message...">
+                <button class="btn btn-primary" style="padding: 0.5rem 1rem;" onclick="sendMessage()">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </div>
+        </div>
+        <div class="chat-btn" onclick="toggleChat()">
+            <i class="fas fa-comments"></i>
+        </div>
+    </div>
+
+    <script>
+        // Theme Management
+        const themeToggle = document.getElementById('themeToggle');
+        const body = document.body;
+        const icon = themeToggle.querySelector('i');
+
+        // Check for saved theme
+        const savedTheme = localStorage.getItem('waslatech-theme');
+        if (savedTheme === 'dark') {
+            body.classList.add('dark-mode');
+            icon.classList.replace('fa-moon', 'fa-sun');
+        }
+
+        themeToggle.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+            const isDark = body.classList.contains('dark-mode');
+            localStorage.setItem('waslatech-theme', isDark ? 'dark' : 'light');
+            
+            if (isDark) {
+                icon.classList.replace('fa-moon', 'fa-sun');
+            } else {
+                icon.classList.replace('fa-sun', 'fa-moon');
+            }
+        });
+
+        // Mobile Menu
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navLinks = document.querySelector('.nav-links');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+            navLinks.style.flexDirection = 'column';
+            navLinks.style.position = 'absolute';
+            navLinks.style.top = '5rem';
+            navLinks.style.left = '0';
+            navLinks.style.width = '100%';
+            navLinks.style.background = 'var(--bg-light)';
+            navLinks.style.padding = '2rem';
+            navLinks.style.borderBottom = '1px solid var(--border)';
+        });
+
+        // Auth Tabs
+        function switchAuthTab(tab) {
+            const loginCard = document.getElementById('loginCard');
+            const signupCard = document.getElementById('signupCard');
+            const loginBtn = document.getElementById('tabLoginBtn');
+            const signupBtn = document.getElementById('tabSignupBtn');
+
+            if (tab === 'login') {
+                loginCard.classList.remove('hidden');
+                signupCard.classList.add('hidden');
+                loginBtn.classList.add('active');
+                signupBtn.classList.remove('active');
+            } else {
+                loginCard.classList.add('hidden');
+                signupCard.classList.remove('hidden');
+                loginBtn.classList.remove('active');
+                signupBtn.classList.add('active');
+            }
+        }
+
+        // Form Validation Helpers
+        function showError(id, message) {
+            const el = document.getElementById(id);
+            if (el) {
+                el.textContent = message;
+                el.style.display = 'block';
+            }
+        }
+
+        function clearErrors() {
+            document.querySelectorAll('.error-message').forEach(el => {
+                el.textContent = '';
+                el.style.display = 'none';
+            });
+        }
+
+        // Contact Form
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            clearErrors();
+            
+            const name = document.getElementById('cName').value.trim();
+            const email = document.getElementById('cEmail').value.trim();
+            const msg = document.getElementById('cMessage').value.trim();
+            let valid = true;
+
+            if (name.length < 2) { showError('nameError', 'Name is too short'); valid = false; }
+            if (!email.includes('@')) { showError('emailError', 'Invalid email address'); valid = false; }
+            if (msg.length < 10) { showError('messageError', 'Message must be at least 10 characters'); valid = false; }
+
+            if (valid) {
+                alert('✅ Thank you! Your message has been sent successfully.');
+                this.reset();
+            }
+        });
+
+        // Login Form
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            clearErrors();
+            const email = document.getElementById('loginEmail').value.trim();
+            const pass = document.getElementById('loginPassword').value;
+            
+            if (!email.includes('@')) { showError('loginEmailError', 'Invalid email'); return; }
+            if (pass.length < 6) { showError('loginPasswordError', 'Password too short'); return; }
+            
+            alert('✅ Login successful!');
+            this.reset();
+        });
+
+        // Signup Form
+        document.getElementById('signupForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            clearErrors();
+            const name = document.getElementById('signupName').value.trim();
+            const email = document.getElementById('signupEmail').value.trim();
+            const pass = document.getElementById('signupPassword').value;
+            const confirm = document.getElementById('confirmPassword').value;
+            
+            if (name.length < 2) { showError('signupNameError', 'Name is too short'); return; }
+            if (!email.includes('@')) { showError('signupEmailError', 'Invalid email'); return; }
+            if (pass.length < 6) { showError('signupPasswordError', 'Password must be at least 6 characters'); return; }
+            if (pass !== confirm) { showError('confirmPasswordError', 'Passwords do not match'); return; }
+            
+            alert('🎉 Account created successfully!');
+            this.reset();
+            switchAuthTab('login');
+        });
+
+        // Pricing Plan Selection
+        function selectPlan(name, price) {
+            alert(`Selected Plan: ${name} (${price})\nRedirecting to contact form...`);
+            document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Chatbot Logic
+        function toggleChat() {
+            const window = document.getElementById('chatWindow');
+            window.style.display = window.style.display === 'flex' ? 'none' : 'flex';
+        }
+
+        function sendMessage() {
+            const input = document.getElementById('chatInput');
+            const body = document.getElementById('chatBody');
+            const msg = input.value.trim();
+            
+            if (!msg) return;
+
+            // Add user message
+            const userMsg = document.createElement('div');
+            userMsg.className = 'message user';
+            userMsg.textContent = msg;
+            body.appendChild(userMsg);
+            input.value = '';
+            body.scrollTop = body.scrollHeight;
+
+            // Bot reply
+            setTimeout(() => {
+                const botMsg = document.createElement('div');
+                botMsg.className = 'message bot';
+                
+                const lowerMsg = msg.toLowerCase();
+                if (lowerMsg.includes('price') || lowerMsg.includes('plan')) {
+                    botMsg.textContent = "Our plans start at $99/month for Small Business. We also offer Enterprise custom pricing.";
+                } else if (lowerMsg.includes('contact') || lowerMsg.includes('support')) {
+                    botMsg.textContent = "You can reach us at +966 1 234 5678 or use the contact form on this page.";
+                } else if (lowerMsg.includes(' features ') || lowerMsg.includes(' services ')) {
+                    botMsg.textContent = "We provide you different plans, Enterprise Security, High-speed network, Dedicated Support, Global Connectivity, Cloud Integration, and Flexible Pricing.";
+                } else {
+                    botMsg.textContent = "Thanks for your message! One of our experts will get back to you soon.";
+                }
+                
+                body.appendChild(botMsg);
+                body.scrollTop = body.scrollHeight;
+            }, 800);
+        }
+
+        // Handle Enter key for chat
+        document.getElementById('chatInput').addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') sendMessage();
+        });
+
+        // Smooth scrolling for all nav links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
