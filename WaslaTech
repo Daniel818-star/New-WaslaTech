@@ -676,7 +676,7 @@
             </div>
             <div class="pricing-grid">
                 <div class="pricing-card">
-                    <h3>Small Business</h3>
+                    <h3>Small Business</h3> 
                     <div class="price">$99<span>/month</span></div>
                     <ul class="pricing-features">
                         <li><i class="fas fa-check-circle"></i> 500GB High-Speed Data</li>
