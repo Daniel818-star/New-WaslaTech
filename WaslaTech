@@ -512,6 +512,7 @@
                 <a href="#home" class="nav-brand">
                     <i class="fas fa-satellite-dish"></i>
                     <span>WaslaTech</span>
+                    
                 </a>
                 <ul class="nav-links">
                     <li><a href="#home" class="nav-link">Home</a></li>
@@ -575,12 +576,14 @@
                 <div class="about-card">
                     <i class="fas fa-rocket"></i>
                     <h3>Our Mission</h3>
-                    <p>To provide seamless, high-performance connectivity that enables businesses to thrive in a digital-first world.</p>
+                    <p>WaslaTech delivers seamless, high-performance communication solutions that keep businesses connected—anytime, anywhere. We provide reliable, high-speed connectivity across Egypt and beyond, ensuring the same level of performance and trust whether used locally or internationally.
+</p>
                 </div>
                 <div class="about-card">
                     <i class="fas fa-eye"></i>
                     <h3>Our Vision</h3>
-                    <p>To be the global leader in enterprise telecom infrastructure, known for reliability and innovation.</p>
+                    <p> To reshape the telecom industry in Egypt through advanced technology, exceptional customer care, and a strong commitment to social impact—setting a new standard for connectivity and service excellence.
+</p>
                 </div>
                 <div class="about-card">
                     <i class="fas fa-heart"></i>
@@ -677,7 +680,7 @@
             <div class="pricing-grid">
                 <div class="pricing-card">
                     <h3>Small Business</h3> 
-                    <div class="price">$99<span>/month</span></div>
+                    <div class="price">$29<span>/month</span></div>
                     <ul class="pricing-features">
                         <li><i class="fas fa-check-circle"></i> 500GB High-Speed Data</li>
                         <li><i class="fas fa-check-circle"></i> 24/7 Customer Support</li>
@@ -689,7 +692,7 @@
                 <div class="pricing-card popular">
                     <div class="popular-badge">Most Popular</div>
                     <h3>Medium Business</h3>
-                    <div class="price">$199<span>/month</span></div>
+                    <div class="price">$59<span>/month</span></div>
                     <ul class="pricing-features">
                         <li><i class="fas fa-check-circle"></i> 2TB High-Speed Data</li>
                         <li><i class="fas fa-check-circle"></i> Dedicated Account Manager</li>
@@ -769,7 +772,7 @@
                         <i class="fas fa-phone"></i>
                         <div>
                             <h4>Call Us</h4>
-                            <p>+966 1 234 5678</p>
+                            <p>+20 346557559</p>
                         </div>
                     </div>
                     <div class="info-link">
@@ -806,7 +809,7 @@
                     </div>
                     <div class="form-group">
                         <label>Phone Number</label>
-                        <input type="tel" id="cPhone" class="form-control" placeholder="+966 1 234 5678">
+                        <input type="tel" id="cPhone" class="form-control" placeholder="+20 ">
                         <div class="error-message" id="phoneError"></div>
                     </div>
                     <div class="form-group">
@@ -1123,10 +1126,10 @@
                 
                 const lowerMsg = msg.toLowerCase();
                 if (lowerMsg.includes('price') || lowerMsg.includes('plan')) {
-                    botMsg.textContent = "Our plans start at $99/month for Small Business. We also offer Enterprise custom pricing.";
+                    botMsg.textContent = "Our plans start at $29/month for Small Business, $59/month for Medium, and custom pricing for Enterprise.";
                 } else if (lowerMsg.includes('contact') || lowerMsg.includes('support')) {
                     botMsg.textContent = "You can reach us at +966 1 234 5678 or use the contact form on this page.";
-                } else if (lowerMsg.includes(' features ') || lowerMsg.includes(' services ')) {
+                } else if (lowerMsg.includes(' features ') || lowerMsg.includes(' services')) {
                     botMsg.textContent = "We provide you different plans, Enterprise Security, High-speed network, Dedicated Support, Global Connectivity, Cloud Integration, and Flexible Pricing.";
                 } else {
                     botMsg.textContent = "Thanks for your message! One of our experts will get back to you soon.";
