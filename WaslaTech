@@ -8,43 +8,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Sora:wght@400;600;700;800&display=swap" rel="stylesheet">
-  <script>
-    tailwind.config = {
-      darkMode: 'class',
-      theme: {
-        extend: {
-          fontFamily: {
-            display: ['Sora', 'sans-serif'],
-            body: ['Plus Jakarta Sans', 'sans-serif'],
-          },
-          colors: {
-            primary: {
-              50: '#eff6ff',
-              100: '#dbeafe',
-              200: '#bfdbfe',
-              300: '#93c5fd',
-              400: '#60a5fa',
-              500: '#3b82f6',
-              600: '#2563eb',
-              700: '#1d4ed8',
-              800: '#1e40af',
-              900: '#1e3a8a',
-            },
-            baby: {
-              light: '#e0f2fe',
-              DEFAULT: '#bae6fd',
-              dark: '#7dd3fc',
-            },
-            turquoise: {
-              light: '#5eead4',
-              DEFAULT: '#2dd4bf',
-              dark: '#14b8a6',
-            }
-          }
-        }
-      }
-    }
-  </script>
+ 
+    
   <style>
     :root {
       --bg: #0a1628;
@@ -127,6 +92,7 @@
 
     .glass-card {
       background: var(--bg-card);
+      -webkit-backdrop-filter: blur(20px);
       backdrop-filter: blur(20px);
       border: 1px solid var(--border);
       transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
@@ -195,6 +161,7 @@
       position: fixed;
       inset: 0;
       background: rgba(0, 0, 0, 0.7);
+      -webkit-backdrop-filter: blur(8px);
       backdrop-filter: blur(8px);
       display: flex;
       align-items: center;
@@ -1225,6 +1192,41 @@
   </div>
 
   <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            display: ['Sora', 'sans-serif'],
+            body: ['Plus Jakarta Sans', 'sans-serif'],
+          },
+          colors: {
+            primary: {
+              50: '#eff6ff',
+              100: '#dbeafe',
+              200: '#bfdbfe',
+              300: '#93c5fd',
+              400: '#60a5fa',
+              500: '#3b82f6',
+              600: '#2563eb',
+              700: '#1d4ed8',
+              800: '#1e40af',
+              900: '#1e3a8a',
+            },
+            baby: {
+              light: '#e0f2fe',
+              DEFAULT: '#bae6fd',
+              dark: '#7dd3fc',
+            },
+            turquoise: {
+              light: '#5eead4',
+              DEFAULT: '#2dd4bf',
+              dark: '#14b8a6',
+            }
+          }
+        }
+      }
+    };
     // --- Core UI Logic ---
     const themeToggle = document.getElementById('theme-toggle');
     const mobileThemeToggle = document.getElementById('mobile-theme-toggle');
